@@ -17,10 +17,10 @@ POSTED_FILE = "posted_games.json"
 
 # Load already posted games
 if os.path.exists(POSTED_FILE):
-with open(POSTED_FILE, "r") as f:
-posted = set(json.load(f))
+    with open(POSTED_FILE, "r") as f:
+        posted = set(json.load(f))
 else:
-posted = set()
+    posted = set()
 
 def save_posted():
 with open(POSTED_FILE, "w") as f:
